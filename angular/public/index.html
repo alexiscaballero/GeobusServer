@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html ng-app="IndexModule">
+	<head>
+		<title>Spectral by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/comments.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!-- Cargamos angular -->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+		<script src="angular-ui-router.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
+		<!-- Cargamos el javascript de angular -->
+		<script src="core.js"></script>
+		<script src="views/home.js"></script>
+		<script src="views/seccion.js"></script>
+		<script src="views/entrada.js"></script>
+		<script src="views/contacto.js"></script>
+	</head>
+	<body class="landing"ng-controller="mainController">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+				<div>
+					<!-- Header -->
+					<header id="header" class="" scroll id="page" ng-class="{alt:boolChangeClass}" toggle-class="alt">
+						<h1><a href="index.html">Spectral</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li ng-class="{active: $state.includes('app.home')}">
+												<a ui-sref="app.home" >Home</a>
+											</li>
+											<li ng-class="{active: $state.includes('app.seccion')}" ng-repeat="seccion in secciones" ng-click="selectSeccion(seccion)">
+												<a ui-sref="app.seccion">{{ seccion.titulo_seccion }}</a>
+											</li>
+											<li ng-class="{active: $state.includes('app.contacto')}">
+												<a ui-sref="app.contacto">Contacto</a>
+											</li>
+											<li>
+												<a href="#">Log In</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+				</div>
+				
+				<div class="container" ui-view=""></div>
+				
+				<div ui-view="footer"></div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

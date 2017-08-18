@@ -1,0 +1,380 @@
+@import url(//fonts.googleapis.com/css?family=Ubuntu:300,700);
+
+
+#foo * {
+  margin: 0;
+  padding: 0;
+  background: scroll transparent none 0 0 repeat;
+  border: 0 none #000;
+  outline: 0 none #000;
+  border-radius: 0;
+  box-shadow: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  text-transform: inherit;
+  line-height: inherit;
+  vertical-align: top;
+  z-index: inherit;
+  cursor: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+#foo *:before,
+#foo *:after {
+  box-sizing: border-box;
+}
+
+#foo body {
+  background-color: #897c7c;
+  color: #000;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-align: left;
+  line-height: 1.4;
+  z-index: 0;
+  cursor: default;
+}
+
+#foo input,
+textarea {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+  cursor: text;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+#foo a,
+button,
+[type="button"],
+[type="checkbox"],
+[type="radio"],
+[for] {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+#foo input[disabled],
+select[disabled],
+textarea[disabled],
+button[disabled] {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: not-allowed;
+}
+
+#foo html,
+body {
+  height: 100%;
+}
+
+#foo body {
+  background: #191919;
+  font-family: Ubuntu, sans-serif;
+  font-weight: 300;
+}
+
+#foo body {
+  max-width: 840px;
+}
+
+#foo ul {
+  padding-left: 180px;
+  padding-right: 100px;
+  list-style: none;
+}
+#foo ul li {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+#foo ul li:not(:first-child) {
+  margin-top: 20px;
+}
+#foo ul li:before {
+  content: "";
+  border-width: 10px 10px 10px 0;
+  border-style: solid;
+  border-color: transparent #fff;
+  position: absolute;
+  top: 10px;
+  left: -10px;
+}
+#foo ul li header {
+  border-bottom: 1px solid #e5e5e5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#foo ul li header * {
+  display: block;
+}
+#foo ul li header h1 {
+  padding-left: 20px;
+  font-weight: normal;
+  line-height: 40px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+#foo ul li header h1 a {
+  color: #191919;
+  display: inline-block;
+}
+#foo ul li header h1.author, ul li header h1.author * {
+  color: #9a3;
+}
+#foo ul li header h1.author:after {
+  content: "Author";
+  margin: 10px 0 10px 10px;
+  padding: 0 5px;
+  background: #9a3;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 20px;
+  position: absolute;
+}
+#foo ul li header button {
+  padding: 10px;
+}
+#foo ul li header button svg {
+  width: 20px;
+  height: 20px;
+}
+#foo ul li header button svg * {
+  fill: #999;
+}
+#foo ul li header button:hover svg * {
+  fill: #666;
+}
+#foo ul li header button.loved svg * {
+  fill: #f66;
+}
+#foo ul li header img {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border: 4px solid #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: -80px;
+}
+#foo ul li article {
+  padding: 20px;
+  white-space: pre-line;
+  overflow-x: hidden;
+  color: #191919;
+}
+#foo ul li article .reply {
+  color: #9a3;
+}
+#foo ul li article strong {
+  font-weight: 500;
+}
+#foo ul li article em {
+  font-style: italic;
+}
+#foo ul li article a {
+  text-decoration: underline;
+}
+#foo ul li article a:hover {
+  text-decoration: none;
+}
+#foo ul li article code {
+  font-family: "Source Code Pro", monospace;
+}
+
+#foo form {
+  margin-top: 20px;
+  padding: 20px 100px 20px 120px;
+  background: transparent;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#foo form:before {
+  content: "";
+  border-width: 10px 10px 10px 0;
+  border-style: solid;
+  border-color: transparent #fff;
+  position: absolute;
+  top: 30px;
+  left: 110px;
+}
+#foo form input,
+form textarea {
+  padding: 9px 20px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: block;
+  color: #191919;
+  border-bottom: 2px solid rgba(46, 56, 66, 1);
+}
+#foo form input:not(:first-child),
+form textarea:not(:first-child) {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+#foo form input[type='email'],
+form textarea[type='email'] {
+  width: 50%;
+  border-right: 1px solid rgba(46, 56, 66, 1);
+}
+#foo form input[type='url'],
+form textarea[type='url'] {
+  width: 50%;
+  border-left: 1px solid rgba(46, 56, 66, 1);
+}
+
+#foo form input.ng-dirty.ng-invalid, form input.ng-dirty.ng-invalid::-webkit-input-placeholder,
+#foo form textarea.ng-dirty.ng-invalid,
+#foo form textarea.ng-dirty.ng-invalid::-webkit-input-placeholder {
+  color: #f66;
+}
+#foo form input.ng-dirty.ng-invalid, form input.ng-dirty.ng-invalid::-moz-placeholder,
+form textarea.ng-dirty.ng-invalid,
+form textarea.ng-dirty.ng-invalid::-moz-placeholder {
+  color: #f66;
+}
+#foo form input.ng-dirty.ng-invalid, form input.ng-dirty.ng-invalid:-ms-input-placeholder,
+form textarea.ng-dirty.ng-invalid,
+form textarea.ng-dirty.ng-invalid:-ms-input-placeholder {
+  color: #f66;
+}
+#foo form input.ng-dirty.ng-invalid, form input.ng-dirty.ng-invalid::placeholder,
+form textarea.ng-dirty.ng-invalid,
+form textarea.ng-dirty.ng-invalid::placeholder {
+  color: #f66;
+}
+#foo form textarea {
+  padding: 20px;
+  height: 120px;
+  resize: none;
+  background-color: #fff;
+  color: #191919;
+}
+#foo form p {
+  margin-top: 10px;
+  padding: 10px 0;
+  width: 50%;
+}
+#foo form p a {
+  text-decoration: underline;
+}
+#foo form p a:hover {
+  text-decoration: none;
+}
+#foo form button {
+  margin: 10px 0px 10px 50%;
+  padding: 10px 0;
+  width: 50%;
+  background: #008040;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: normal;
+  font-height: small;
+  text-align: center;
+  display: block;
+}
+#foo form img {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border: 4px solid rgba(229, 229, 229, 0.5);
+  border-radius: 2px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+@media (max-width: 440px) {
+  #foo ul {
+    padding: 0;
+  }
+  #foo ul li:before {
+    content: none;
+  }
+  #foo ul li header img {
+    clip: rect(0, 0, 0, 0);
+  }
+  #foo ul li header h1.author:after {
+    content: none;
+    color: #fff;
+  }
+
+  #foo form {
+    padding-left: 20px;
+  }
+  #foo form:before {
+    content: none;
+  }
+  #foo form img {
+    clip: rect(0, 0, 0, 0);
+  }
+  #foo form input,
+  form textarea {
+    padding: 10px;
+  }
+  #foo form textarea {
+    height: 80px;
+  }
+  #foo form p,
+  form button {
+    margin: 10px 10px 0;
+    width: 100%;
+  }
+  #foo form p {
+    padding: 0;
+  }
+}
+
+
+::-webkit-input-placeholder {
+    color: #436787 !important;
+    opacity: 1.0;
+  }
+
+  :-moz-placeholder {
+    color: #436787 !important;
+    opacity: 1.0;
+  }
+
+  ::-moz-placeholder {
+    color: #436787 !important;
+    opacity: 1.0;
+  }
+
+  :-ms-input-placeholder {
+    color: #436787 !important;
+    opacity: 1.0;
+  }

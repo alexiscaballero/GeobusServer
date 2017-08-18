@@ -1,0 +1,18 @@
+<section id="three" class="wrapper style3 special">
+						<div class="inner">
+							<header class="major">
+								<h2>{{seccionSeleccionada.titulo_seccion}}</h2>
+								<p>{{seccionSeleccionada.subtitulo_seccion}}</p>
+							</header>
+
+							<ul class="features">
+								<li ng-repeat="entrada in entradas" class="icon fa-laptop shadow" ng-click="selectEntrada(entrada)" ng-class="{active: $state.includes('app.entrada')}">
+									<a ui-sref="app.entrada">
+										<h3>{{entrada.titulo_entrada}}</h3>
+										<p>{{entrada.contenido}}</p>
+									</a>	
+								</li>
+							</ul>
+						</div>
+					</section>
+					</article>

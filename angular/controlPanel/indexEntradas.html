@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html ng-app="MainApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Administración De Entradas</title>
+	<!-- Cargamos bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<!-- Cargamos angular -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<!-- Cargamos el javascript de angular -->
+	<script src="coreEntradas.js"></script>
+
+</head>
+<body ng-controller="mainController">
+	<div class="container">
+
+		<div class="jumbotron text-center" ng-prueba>
+			<h1>Nº de Entradas: <span class="label label-success">{{ entradas.length }}</span></h1>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-1">
+				<table class="table table-striped">
+					<tr class="info">
+						<td>Id</td>
+						<td>Título</td>
+						<td>Contenido</td>
+						<td>Fecha Creación</td>
+						<td>Fecha Ultima Actualización</td>
+						<td>Id Seccion</td>
+					</tr>
+					<tr ng-repeat="entrada in entradas" ng-click="selectEntrada(entrada)">
+						<td>{{ entrada.id_entrada }}</td>
+						<td>{{ entrada.titulo_entrada }}</td>
+						<td>{{ entrada.contenido }}</td>						
+						<td>{{ entrada.createdAt }}</td>						
+						<td>{{ entrada.updatedAt }}</td>
+						<td>{{ entrada.id_seccion }}</td>						
+					</tr>
+				</table>					
+			</div>
+			<div class="col-sm-4 col-sm-offset-1 text-center">
+				<form name="myForm">
+					<div class="form-group">
+						<input type="text" class="form-control input-lg text-center" placeholder="Título" ng-model="newEntrada.titulo_entrada" required>
+						<br>
+						<input type="text" class="form-control input-lg text-center" placeholder="Contenido" ng-model="newEntrada.contenido" required>
+						<br>
+						<input type="text" class="form-control input-lg text-center" placeholder="Id Seccion" ng-model="newEntrada.id_seccion" required>
+					</div>
+
+					<!-- Acciones que podemos realizar en el formulario -->
+					<button type="submit" class="btn btn-success btn-lg" ng-click="registrarEntrada()" ng-disabled="myForm.$invalid || selected">Registrar</button>
+					<button type="submit" class="btn btn-warning btn-lg" ng-click="modificarEntrada(newEntrada)" ng-disabled="!newEntrada.titulo_entrada || !newEntrada.contenido || !newEntrada.id_seccion ||!selected">Modificar</button>
+					<button type="submit" class="btn btn-danger btn-lg" ng-click="borrarEntrada(newEntrada)" ng-disabled="!newEntrada.titulo_entrada || !newEntrada.contenido || !newEntrada.id_seccion || !selected">Borrar</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
